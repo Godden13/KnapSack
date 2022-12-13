@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/style/style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Document</title>
 </head>
 <body>
-  
-  <script src="./assets/script/script.js"></script>
+   <div class="total-space">
+		<div class="card">
+		<div class="heading">
+			<h1>KnapSack</h1>
+		</div>
+        <div class="weight">
+            <input type="number" placeholder="Weight" min="1" max="100" id="weight">
+        </div>
+        <div class="item">
+            <select name="items" id="items">
+                <option value="item 1"  id="item1">item 1</option>
+                <option value="item 2" id="item2">item 2</option>
+                <option value="item 3" id="item3">item 3</option>
+                <option value="item 4" id="item4">item 4</option>
+                <option value="item 5" id="item5">item 5</option>
+                <option value="item 6" id="item6">item 6</option>
+                <option value="item 7" id="item7">item 7</option>
+                <option value="item 8" id="item8">item 8</option>
+            </select>
+        </div>
+        <div class="buttons">
+            <button id="done">Done</button>
+            <button id="reset">reset</button>
+        </div>
+        <div id="showscreen"></div>
+
+            <div id="calc"></div>
+            
+            </div>
+	</div>
+   
+     <script src="./assets/script/script.js"></script>
 </body>
 </html>
