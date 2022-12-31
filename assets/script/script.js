@@ -3,6 +3,7 @@ let itemList = document.getElementById('items')
 let doneButtonElement = document.getElementById('done');
 let display = document.getElementById('showscreen');
 let displayWeight = document.getElementById('calc');
+const reset = document.getElementById('reset')
 let count = 0;
 
 let knapsack = {
@@ -47,6 +48,12 @@ doneButtonElement.addEventListener('click', () => {
         })
     }
 })
+
+function refreshPage(){
+    window.location.reload();
+}
+
+reset.addEventListener('click', refreshPage)
 
 var arr = [
     { name: "item 1", weight: 4, value: 100 },
