@@ -1,10 +1,9 @@
 const maxWeight = document.getElementById('weight')
 const itemList = document.getElementById('items')
 const doneButtonElement = document.getElementById('done')
+const completed = document.querySelector('.done')
 const display = document.getElementById('showscreen')
-const displayWeight = document.getElementById('calc')
 const reset = document.getElementById('reset')
-const count = 0
 
 const knapsack = {
   capacity: 0,
@@ -54,8 +53,16 @@ function refreshPage () {
 }
 
 reset.addEventListener('click', refreshPage)
+completed.addEventListener('click', () => {
+  document.querySelector('select').disabled = true
+  document.querySelector('#showscreen').style.background = 'red'
+  document.querySelector('input').disabled = true
+  knapsack.items.map((item) => {
+    display.innerHTML += item.name + ' ' + ' has' + ' ' + item.weight + ' ' + 'weight ' + ' ' + 'and costs' + ' ' + item.value + ' ' + '<br/>'
+  })
+})
 
-let arr = [
+const arr = [
   { name: 'item 1', weight: 4, value: 100 },
   { name: 'item 2', weight: 1, value: 200 },
   { name: 'item 3', weight: 3, value: 400 },
